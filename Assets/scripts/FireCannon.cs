@@ -49,7 +49,7 @@ public class FireCannon : MonoBehaviour {
 		device.TriggerHapticPulse (900);
 
 		GameObject projectile = Instantiate (prefab) as GameObject;	//instantiate a projectile
-		projectile.transform.position = transform.position;	//set initial position
+		projectile.transform.position = transform.position + transform.forward * 2000 ;	//set initial position
 		projectile.transform.localScale = new Vector3(1, 1, 1);	//scale projectile
 		Rigidbody rb = projectile.GetComponent<Rigidbody> ();		//grab rigid body component
 		Vector3 incline = new Vector3(0,verticalSpeed,0);
